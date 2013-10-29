@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+print "Please input some numbers: \n";
+#get the numbers
+@numbers = <STDIN>;
+chomp(@number);
+$all = &total(@numbers);
+
+sub total{
+#the numbers give to @number array
+	my(@numbers) = @_;
+#position
+	my($num) = "0";
+	foreach(@_){
+		$num += $_;
+	}
+	return $num;
+}
+
+print "total is : ".$all."\n";

@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+use strict;
+my %firends=(
+	fred => 'flintstone',
+	barney => 'rubble',
+	wilma => 'fintstone',
+);
+print "Please input your friends's name: ";
+my $name = <STDIN>;
+chomp($name);
+print $name."'s first name is : $firends{$name}\n";
+

@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+use strict;
+
+my @lines;
+my $line_number = 0;
+while(defined($_ = <>)){
+	$lines[$line_number] = $_;
+	$line_number ++;
+}
+
+$line_number = $#lines;
+while($line_number >= 0){
+	print "$lines[$line_number]";
+	$line_number --;
+}

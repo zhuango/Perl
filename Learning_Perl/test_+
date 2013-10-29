@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+use strict;
+$_ = "LiZhang";
+if(/Liu+Zhang/){#has one 'u' or many 'u'
+	print "+ is OK\n";
+}
+if(/Liu*Zhang/){#has no 'u' or a 'u' or many 'u'
+	print "* is OK\n";
+}
+if(/Liu.*Zhang/){#has any charchter
+	print ".* is OK\n";
+}
+if(/Liu?Zhang/){#has one 'u' or has no 'u'
+	print "? is OK\n";
+}
+
+$_ = "abbd";
+if(/(.)\1/){
+	print "(.) \\1 OK\n";
+}
+$_ = "LiuOg ZhuangOgsd";
+if(/Liu(..) Zhuang\1/){
+	print "(..)  \\1 is OK\n";
+}
+
+$_= "yabba dabbadoo";
+if(/y((.)(.)\3\2) d\1/){
+	print "((.)(.)\\3\\2) d\\1 is OK!\n";
+}
+
+$_= "ad111ds";
+if(/ad(.)\g{1}\g{1}ds/){
+	print "g{N} is OK\n";
+}
+
+$_= "ad111ds";
+if(/ad(.)\g{1}+ds/){
+	print "g{N}+ is OK\n";
+}
+
+$_= "ad111ds";
+if(/ad(.)+ds/){
+	print "(.)+is OK\n";
+}
+
+$_ = "xaa11bb";
+if(/(.)(.)\g{-1}11/){
+	print "(.)(.)\g{-1} is OK\n";
+}

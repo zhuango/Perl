@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+print "\n";
+#while(defined($line=<>)){
+while($line=<>){
+	chomp($line);
+	print "$line\n";
+}
+print "\n";

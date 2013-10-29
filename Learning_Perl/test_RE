@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+print "Please input something strings\n";
+$_=<STDIN>;
+if(/fred/){
+	print "OK\n";
+}else {
+	print "Not OK!\n";
+}
+

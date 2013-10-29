@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+use strict;
+print "Please input two numbers to nul\n";
+
+my $number1 = <STDIN>;
+chomp($number1);
+print "the first number is : ".$number1;
+print "\n";
+
+my $number2 = <STDIN>;
+#chomp($number2);
+print "the second number is :".$number2;
+
+my $mul = $number1 * $number2;
+print "the mul is : ".$mul."\n";
+

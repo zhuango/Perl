@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+use strict;
+print "Please input your \$what: ";
+my $what=<STDIN>;
+chomp($what);
+while(<>){
+	chomp;
+	if(/($what){3}/){
+		print "OK! |$`<$&>$'|\n";
+	}else{
+		print "$_ is not OK\n";
+	}
+}

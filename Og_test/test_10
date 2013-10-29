@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+
+#print the info
+print "Please input your R: ";
+#get your circle's R
+$R=<STDIN>;
+#input nothing
+if($R eq "\n"){
+	print "you input nothing !!!";
+}
+#R = 0? then length if circle is 0
+if($R lt "0"){
+	print "length if the circle is : 0\n";
+}else{#R != 0? then cal the length of circle
+	$length = $R * 2 * 3.14;
+	print "length of the circle is : $length\n";
+}
+

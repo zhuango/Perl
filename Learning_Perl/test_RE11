@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+print "Please input some strings\n";
+
+while(<>){
+	chomp;
+	if(/(?<ENDA>(\w*)a)\s*/){
+		print "Matched: |$`<$&>$'|\n";
+		print "\'ENDA\' contains \'$+{ENDA}\'\n";
+		if(/(\w*)a\s*(?<NUM>.{0,5})/){
+			print "behand five: $+{NUM}\n";
+		}
+	}else{
+		print "No match: |$_|\n";
+	}
+}

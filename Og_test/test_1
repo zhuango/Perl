@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+
+use strict;
+my @strings=<STDIN>;
+chomp(@strings);
+my $aver = &print_string(@strings);
+my @abv = &get_ge(@strings);
+
+sub print_string{
+	my(@sub_string) = @_;
+	my($num) = "0";
+	foreach(0..$#sub_string){
+		$num += $sub_string[$_];
+	}
+	my $aver = $num/($#sub_string + 1);
+}
+print "the aver is : ".$aver;
+print "\n";
+sub get_ge{
+	my(@numbers) = @_;
+	my @abv;
+	foreach(0..$#numbers){
+		if($numbers[$_] ge $aver){
+			push (@abv, $numbers[$_]);
+		}
+	}
+	@abv;
+}
+
+print "numbers greater or equal than the aver: ";
+foreach(0..$#abv){
+	print $abv[$_]." ";
+}
+
+print "\n";

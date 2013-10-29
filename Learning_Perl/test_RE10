@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+print "Please input some strings\n";
+
+while(<>){
+	chomp;
+	if(/(?<ENDA>(\w*)a)\s*/){
+		print "Matched: |$`<$&>$'|\n";
+		print "\'ENDA\' contains \'$+{ENDA}\'\n";
+	}else{
+		print "No match: |$_|\n";
+	}
+}

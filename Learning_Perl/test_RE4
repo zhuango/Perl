@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+print "Please input something strings\n";
+while($_=<STDIN>){
+	chomp;
+#	if(/^[A-Z](([A-Z]*[a-z]+) | ([a-z]+[A-Z]*))/){
+	if(/^[A-Z][A-Z]*[a-z]+/){
+		print "$_ is OK\n";
+	}else {
+		print "$_ is not OK!\n";
+	}
+}
+

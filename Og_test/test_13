@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+@lines = <STDIN>;
+chomp(@lines);
+$end = $#lines;
+
+print "you input : ";
+while($end ne "-1"){
+	print $lines[$end]." ";
+	$end--;
+}
+print "\n";

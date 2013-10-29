@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+use strict;
+#a value of circle's R
+my $r = 12.5;
+#the length of circle
+my $length = $r * 2 * 3.141592653;
+#print the length of circle
+print "Length of circle is : $length\n";
+

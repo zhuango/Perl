@@ -1,0 +1,59 @@
+#!/usr/bin/perl
+
+$fred[0]="Hello";
+$fred[1]="I'm a nerd!";
+$number = 0;
+#print the "I'm a nerd!" and [Enter]
+print $fred[1]."\n";
+#print $number = 0, So print the "Hello"
+print $fred[$number]."\n";
+
+$fred[2] = "we are J";
+$fred[4] = "again";
+#$fred[3] = ""
+$string = $#fred;
+#$#fread mead the biggest position of array named fred(Now 4!)
+print $string ."\n";
+#print "again"
+print $fred[-1]."\n";
+
+#result: liu = nan, Zhang = nv
+($liu, $Zhang) = qw(nan nv);
+print $liu." ".$Zhang."\n";
+
+#result: liu = nan, Zhang = ""
+($liu, $Zhang) = qw(nan);
+print $liu." "."##".$Zhang."\n";
+
+#print the "again"(postion: 4)
+$Pop_string = pop(@fred);
+print $Pop_string."\n";
+#print nothing(because this is the second I call the pop???)
+$Pop_string1 = pop(@fred);
+print $Pop_string1."@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n";
+
+#print the fred the whole array.(position 3 and 4 went away because the two pop function)
+print @fred;
+print "\n";
+
+@array = qw#I'm haunary baby!#;
+#result: m = I;m , n = haunary, array = baby(becaues the two shift function
+$m = shift(@array);
+$n = shift(@array);
+print $m."\n";
+print $n."\n";
+print @array;
+print "\n";
+
+#array = liu Zhuang baby
+unshift(@array, "Liu " );
+unshift(@array, "Zhuang ");
+print @array;
+print "\n";
+
+@fred2 = qw(hello dolly);
+$y = 2 * 4;
+$x = "This is $fred2[1]'s place";
+print $x."\n";
+$x = "This is $fred2[$y-1]'s place";
+print $x."\n";

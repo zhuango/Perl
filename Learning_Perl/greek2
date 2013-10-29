@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+use 5.010;
+
+greek("Liu");
+greek("Zhang");
+greek("Wang");
+greek("Zhou");
+
+sub greek{
+	state @names;
+	my $name;
+	$name = $_[0];
+	my $before = $names[$#names];
+	push @names, $name;
+	if ($before eq undef){
+		print "Hi $name, you are the first one here\n";
+	}else{
+		print "Hi!$name, You know? @names  is here also\n";
+	}
+}

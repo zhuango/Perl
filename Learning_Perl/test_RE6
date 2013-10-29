@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+print "Please input something strings\n";
+while($_=<STDIN>){
+	chomp;
+	if(/(wilam.*fred)|(fred.*wilam)/){
+		print "$_ is OK\n";
+	}else {
+		print "$_ is not OK!\n";
+	}
+}
+

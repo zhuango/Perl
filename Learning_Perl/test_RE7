@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+
+print "Please input some strings\n";
+while(<>){
+	chomp;
+	if(/match/){
+		print "Matched: |$`<$&>$'|\n";
+	}else{
+		print "No match: |$_|\n";
+		}
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+
+@number = (1..1000);
+$all = &total(@number);
+
+sub total{
+	my (@numbers) = @_;
+	my($sum) = "0";
+	foreach(@_){
+		$sum += $_;
+	}
+	return $sum;
+}
+
+print "total is : ".$all."\n";

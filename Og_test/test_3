@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+use strict ;
+#the strings is in your array
+my @names = qw/Liu Zhuang Is A Big Band/;
+#the result is save the position of array
+my $result = &find_Zhuang("Zhuang", @names);
+
+#find the string in this array
+sub find_Zhuang{
+	my($string_you_want_to_find, @names) = @_;
+	foreach(0..$#names){
+		if($string_you_want_to_find eq $names[$_]){
+			return $_;
+		}
+	}
+#can ont find this string, then return the error number
+	-1;
+}
+#if result get the -1.It's error(can not find)
+if($result eq -1){
+	print "I can't find!\n";
+}else{#find the string
+	print "position is :".($result+1)."\n";
+}

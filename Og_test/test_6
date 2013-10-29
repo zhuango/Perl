@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+(@lines) = qw(Liu Zhuang is a big boy);
+#get something from stdin
+@number = <STDIN>;
+#cut the [Enter] key
+chomp(@number);
+
+$end = "0";
+while($end ne $#number+1){
+	print $lines[$number[$end]-1]." ";
+	$end++;
+}
+print "\n";

@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+&printD;
+sub printD{
+	print "dsg\n";
+}
+

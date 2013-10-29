@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+use strict;
+my %words;
+print "Please input some words and we will cal the number!\n";
+while(<STDIN>){
+	chomp;
+	$words{$_} += 1;
+}
+my @Keys = sort keys %words;
+foreach(@Keys){
+	print "$_	:	$words{$_}\n";
+}

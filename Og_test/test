@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+
+@line = <STDIN>;
+chomp(@line);
+
+$cout = 0;
+while($cout ne $#line){
+	print $line[$cout];
+	$cout += 1;
+}
+

@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+print "$ARGV[0]\n";
+if($#ARGV != 0){
+	print "Usage: perl test_RE14 filename\n";
+	exit();
+}
+my $filename = $ARGV[0];
+$filename =~ s/\..*/\.out/;
+open NEW_FILE, '>', $filename;
+while(<>){
+	chomp;
+	if(s/Liu/Og/ig){
+		print NEW_FILE "$_\n";
+	}
+}

@@ -1,0 +1,47 @@
+#!/usr/bin/perl
+	print "please input some numbers:";
+
+#get numbers from stdin, put into the array @numbers
+	@numbers =<STDIN>;
+
+#eat the [Enter] key in string
+	chomp(@numbers);
+
+#call aver get the ave
+	$ave = &aver(@numbers);
+
+#call abv and get the numbers
+	@abv = &above($ave,@numbers);
+
+#this function use to cal the aver
+	sub aver{
+#get the args (@numbers)
+		my(@numbers) = @_;
+#a value use for go through the array
+		my $sum = "0";
+#cal the total
+		foreach(0..$#numbers){
+			$sum+=$numbers[$_];
+		}
+#mul the number of array, and get the aver
+		my $ave = $sum/($#numbers+1);
+	}
+
+#This function print the number that bigger or equal than the aver
+	sub above{
+		my($ave,@numbers) = @_;
+		my @abv;
+		foreach(0..$#numbers){
+			if($numbers[$_] ge $ave){
+				push(@abv,$numbers[$_]);
+			}
+		}
+		@abv;
+	}
+
+	print "the ave is :".$ave."\n";
+	print "greater or equal than aver: ";
+	foreach(0..$#abv){
+		print $abv[$_]." ";
+	}
+	print "\n";

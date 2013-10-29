@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+
+$val = &child;
+
+sub child{
+	print "T'm a child\n";
+	$num = 10;
+	$num = $num + 20;
+}
+
+print $val."\n";
+
+$val = &child;
+print "again: ".$val."\n";
+
+$Big = &mysort(2,4,10,4,1);
+
+sub mysort{
+	my($max) = shift(@_);
+	foreach(@_){
+		if($_ > $max){
+			$max = $_;
+		}
+	}
+	$max;
+}
+
+print "The bigest one is: ".$Big."\n";

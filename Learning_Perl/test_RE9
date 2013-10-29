@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+print "Please input some strings\n";
+
+while(<>){
+	chomp;
+	if(/((?:\w+)a)\z/){
+		print "Matched: |$`<$&>$'|\n";
+		print "\$1 contains \'$1\'\n";
+	}else{
+		print "No match: |$_|\n";
+	}
+}
